@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Head & Meta -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/main.css">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="img/favicon/site.webmanifest">
+    <meta name="description" content="Get the weather in your favourite cities told to you by a sassy gay weatherman. WARNING: NSFW Language, 18+ only! ">
+    <title>Your Gay Weatherman Application | By Bryce Maloney</title>
+</head>
+<!-- Beginning of Body -->
+
+<body class="body flex flexColumn alignCenter">
+    <!-- Title Bar -->
+    <div class="title textCenter bgWhite">
+        <h1>What does the Gay Weatherman say?</h1>
+    </div>
+    <!-- Beginning of Card -->
+    <div class="card flex flexColumn">
+        <!-- Search Bar -->
+        <div class="search flex alignCenter justifyBetween bgWhite">
+            <input type="text" id="searchBar1" class="searchBar textCenter" placeholder="Enter Your City">
+            <input type="text" id="searchBar2" class="searchBar textCenter" placeholder="State" maxlength="2">
+            <input type="text" id="searchBar3" class="searchBar textCenter" placeholder="Country" maxlength="2">
+            <button class="btn"><svg stroke="currentColor" fill="#000000" stroke-width="0" viewBox="0 0 1024 1024"
+                    height="2em" width="2em" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M909.6 854.5L649.9 594.8C690.2 542.7 712 479 712 412c0-80.2-31.3-155.4-87.9-212.1-56.6-56.7-132-87.9-212.1-87.9s-155.5 31.3-212.1 87.9C143.2 256.5 112 331.8 112 412c0 80.1 31.3 155.5 87.9 212.1C256.5 680.8 331.8 712 412 712c67 0 130.6-21.8 182.7-62l259.7 259.6a8.2 8.2 0 0 0 11.6 0l43.6-43.5a8.2 8.2 0 0 0 0-11.6zM570.4 570.4C528 612.7 471.8 636 412 636s-116-23.3-158.4-65.6C211.3 528 188 471.8 188 412s23.3-116.1 65.6-158.4C296 211.3 352.2 188 412 188s116.1 23.2 158.4 65.6S636 352.2 636 412s-23.3 116.1-65.6 158.4z">
+                    </path>
+                </svg></button>
+        </div>
+        <!-- Beginning of Weather Modal -->
+        <div id="weather" class="weather bgWhite">
+            <div class="mainWeather flex flexColumn">
+                <div class="tempBox flex">
+                    <img src="img/gw/sunny.png" alt="">
+                    <div class="temp">-00<sup>°c</sup></div>
+                </div>
+                <div class="tempBox flex alignCenter">
+                    <p class="city">Lorem ipsum dolor sit amet, consectetur <strong>adipiscing</strong> elit. Aliquam ac ligula vitae libero efficitur pretium. Donec non sodales metus.</p>
+                    <div class="feels flex flexColumn textCenter justifyCenter alignCenter">
+                        <strong>Feels Like</strong>
+                        <div class="flex flexColumn textCenter ">
+                            <p><sup id="feels">9°c</sup></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Beginning of Welcome Modal -->
+    <div class="modal flex alignCenter">
+        <div class="weather flex flexColumn alignCenter bgWhite">
+            <h2 class="textCenter">Welcome to the Gay Weatherman App!</h2>
+            <p class="textCenter">Hi Friend! Thanks for exploring the Gay Weatherman App!</p>
+            <p class="textCenter"><strong style="color: tomato">Please Note: there is some choice language that is not
+                    "necessarily" safe for work.</strong><br> I apologize in advance...</p>
+            <h3>How to use for best results:</h3>
+            <p class="textCenter" style="font-weight: 500;">You will need to have correct spelling </p>
+            <ol>
+                <li>Enter your city name.</li>
+                <li>Enter the state or province code (2 letters) your city is in.</li>
+                <li>Enter the country your city code (2 letters) is in.</li>
+                <li>Press "Enter" or click on the magnifying glass.</li>
+            </ol>
+            <button id="btn" class="btn">Let's Go!</button>
+            <a href="https://brycemaloney.ca" class="btn textCenter">Retreat!</a>
+        </div>
+    </div>
+    <!-- Scripts -->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

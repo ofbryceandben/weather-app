@@ -1,0 +1,405 @@
+.body {
+    font-family: 'Roboto', sans-serif;
+    background: url('../img/bg/sunrain.png');
+    animation: default 1s ease-in-out forwards;
+    justify-content: flex-start;
+    height: 100vh;
+    padding: 10px;
+    margin: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+    font-size: 4vw;
+}
+
+@keyframes default {
+    100% {
+        background: url('../img/bg/sunrain.png');
+    }
+}
+
+.title {
+    background-color: whitesmoke;
+    position: relative;
+    border-radius: 15px;
+    padding: 5px 20px;
+    margin: 10px 0;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+
+
+/* =======================================
+Flex Classes
+======================================= */
+
+.flex {
+    display: flex;
+}
+
+.flexColumn {
+    flex-direction: column;
+}
+
+.alignCenter {
+    align-items: center;
+}
+
+.justifyBetween {
+    justify-content: space-between;
+}
+
+.justifyCenter {
+    justify-content: center;
+}
+
+
+/* =======================================
+Text Classes
+======================================= */
+
+.textCenter {
+    text-align: center;
+}
+
+
+/* =======================================
+Background / Shadow Classes
+======================================= */
+
+.bgWhite {
+    background-color: whitesmoke;
+}
+
+
+/* =======================================
+Modal
+======================================= */
+
+.modal {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    justify-content: center;
+    z-index: 101;
+    background-color: rgba(0, 0, 0, 0.3);
+    font-size: 1em;
+}
+
+.modal #btn {
+    font-size: 2rem;
+}
+
+.modal a {
+    display: block;
+    text-decoration: none;
+    color: tomato;
+    font-weight: 400;
+}
+
+.modal h2,
+p {
+    margin: 5px 0;
+}
+
+.flex.weather {
+    height: 99vh;
+    max-height: 600px;
+    width: 80vw;
+    max-width: 500px;
+    justify-content: space-around;
+}
+
+
+/* =======================================
+Weather Card
+======================================= */
+
+.card {
+    max-width: 500px;
+    width: 90vw;
+    align-items: stretch;
+    justify-content: center;
+}
+
+.search {
+    position: relative;
+    top: 150px;
+    padding: 20px;
+    border-radius: 15px;
+    margin-bottom: 15px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+
+.btn {
+    background-color: transparent;
+    font-weight: 700;
+    width: 80vw;
+    max-width: 400px;
+    padding: 5px;
+    border-radius: 15px;
+    border: none;
+}
+
+.search .btn {
+    border-radius: 100%;
+    height: 40px;
+    width: 40px !important;
+}
+
+.searchBar {
+    padding: 5px;
+    height: 30px;
+    border: none;
+    width: 70%;
+    box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+    border: transparent 3px solid;
+}
+
+#searchBar1 {
+    border-radius: 15px 0 0 15px;
+    min-width: 105px;
+}
+
+#searchBar3,
+#searchBar2 {
+    max-width: 100px;
+}
+
+#searchBar3 {
+    border-radius: 0 15px 15px 0;
+    margin-right: 10px;
+}
+
+.searchBar::placeholder {
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+}
+
+.weather {
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+
+.card .weather {
+    bottom: -1000px;
+    opacity: 0;
+    position: relative;
+}
+
+.mainWeather img {
+    width: 40%;
+    height: 40%;
+}
+
+.tempBox {
+    width: 100%;
+}
+
+.tempBox+.tempBox {
+    height: 30%;
+}
+
+.temp {
+    font-size: 5em;
+    margin: auto;
+}
+
+sup {
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.city {
+    font-size: 1.1em;
+    text-align: justify;
+}
+
+strong {
+    font-size: 1.25em;
+    z-index: 1;
+}
+
+.tempBox img {
+    border-radius: 15px;
+}
+
+.feels {
+    min-width: 100px;
+    width: 40%;
+    align-self: stretch;
+    background-color: #fdc720;
+    padding: 10px;
+    border-radius: 10px;
+    margin-left: 5px;
+}
+
+
+/* =======================================
+Media Queries
+======================================= */
+
+@media (min-width: 425px) {
+    .body {
+        font-size: 1em;
+    }
+    .mainWeather:last-child {
+        flex-basis: 40%;
+    }
+}
+
+
+/* =======================================
+Background Changes
+======================================= */
+
+.body.thunder {
+    animation: thunder 1s ease-in-out forwards;
+}
+
+@keyframes thunder {
+    100% {
+        background: url('../img/bg/thunder.png');
+    }
+}
+
+.body.rain {
+    animation: rain 1s ease-in-out forwards;
+}
+
+@keyframes rain {
+    100% {
+        background: url('../img/bg/rain.png');
+    }
+}
+
+.body.snow {
+    animation: icy 1s ease-in-out forwards;
+}
+
+@keyframes icy {
+    100% {
+        background: url('../img/bg/snow.png');
+    }
+}
+
+.body.mostlycloud {
+    animation: mostlyCloud 1s ease-in-out forwards;
+}
+
+@keyframes mostlyCloud {
+    100% {
+        background: url('../img/bg/mostlycloud.png');
+    }
+}
+
+.body.mostlycloudn {
+    animation: mostlyCloudn 1s ease-in-out forwards;
+}
+
+@keyframes mostlyCloudn {
+    100% {
+        background: url('../img/bg/mostlycloudn.png');
+    }
+}
+
+.body.mostlysun {
+    animation: mostlySun 1s ease-in-out forwards;
+}
+
+@keyframes mostlySun {
+    100% {
+        background: url('../img/bg/mostlysun.png');
+    }
+}
+
+.body.mostlymoon {
+    animation: mostlyMoon 1s ease-in-out forwards;
+}
+
+@keyframes mostlyMoon {
+    100% {
+        background: url('../img/bg/mostlymoon.png');
+    }
+}
+
+.body.sunny {
+    animation: sun 1s ease-in-out forwards;
+}
+
+@keyframes sun {
+    100% {
+        background: url('../img/bg/sunny.png');
+    }
+}
+
+.body.night {
+    animation: moon 1s ease-in-out forwards;
+}
+
+@keyframes moon {
+    100% {
+        background: url('../img/bg/moon.png');
+    }
+}
+
+.body.fog {
+    animation: fog 1s ease-in-out forwards;
+}
+
+@keyframes fog {
+    100% {
+        background: url('../img/bg/fog.png');
+    }
+}
+
+.body.windy {
+    animation: breezy 1s ease-in-out forwards;
+}
+
+@keyframes breezy {
+    100% {
+        background: url('../img/bg/breezy.png');
+    }
+}
+
+.body.breezy {
+    animation: breezy 1s ease-in-out forwards;
+}
+
+@keyframes breezy {
+    100% {
+        background: url('../img/bg/breezy.png');
+    }
+}
+
+.body.hot {
+    animation: hot 1s ease-in-out forwards;
+}
+
+@keyframes hot {
+    100% {
+        background: url('../img/bg/hot.png');
+    }
+}
+
+.body.cold {
+    animation: cold 1s ease-in-out forwards;
+}
+
+@keyframes cold {
+    100% {
+        background: url('../img/bg/cold.png');
+    }
+}
+
+.body.freezing {
+    animation: freezing 1s ease-in-out forwards;
+}
+
+@keyframes freezing {
+    100% {
+        background: url('../img/bg/freezing.png');
+    }
+}
